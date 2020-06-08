@@ -48,6 +48,7 @@ function validateInput(inputID){
 function validateName(){
 	if(!name.value || name.value.length<3){
 		name.parentNode.classList.add('error')
+		name.placeholder = ''
 	}else{
 		name.parentNode.classList.remove('error')
 	}
@@ -56,23 +57,26 @@ function validateName(){
 function validateLastName(){
 	if(!lastName.value || lastName.value.length<3){
 		lastName.parentNode.classList.add('error')
+		lastName.placeholder = ''
 	}else{
 		lastName.parentNode.classList.remove('error')
-	}
-}
-
-function validatePassword(){
-	if(!password.value || password.value.length<6){
-		password.parentNode.classList.add('error')
-	}else{
-		password.parentNode.classList.remove('error')
 	}
 }
 
 function validateEmail(){
 	if(!regexExpression.test(email.value)){
 		email.parentNode.classList.add('error')
+		email.placeholder = 'email@xample/com'
 	}else{
 		email.parentNode.classList.remove('error')
+	}
+}
+
+function validatePassword(){
+	if(!password.value || password.value.length<6){
+		password.parentNode.classList.add('error')
+		password.placeholder = ''
+	}else{
+		password.parentNode.classList.remove('error')
 	}
 }
